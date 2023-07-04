@@ -12,12 +12,14 @@ def sms_reply():
     """Respond to incoming calls with a simple text message."""
     # Fetch the message
     msg = request.form.get('Body')
+    sender = str(request.form.get('Sender'))
 
     # Create reply
     resp = MessagingResponse()
-    resp.message("Wayne Will get back to you ASAP")
+    resp.message("Hello there "+sender+",\n Welcome to Family First Bank\n How can i help you today?")
 
     return str(resp)
 
 if __name__ == "__main__":
     app.run(debug=True)
+
