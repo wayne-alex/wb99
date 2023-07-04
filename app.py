@@ -12,7 +12,7 @@ def sms_reply():
     """Respond to incoming calls with a simple text message."""
     # Fetch the message
     msg = request.form.get('Body')
-    sender = request.form.get('Sender')
+    sender = str(request.form.get('Sender'))
 
     # Create reply
     resp = MessagingResponse()
@@ -20,5 +20,6 @@ def sms_reply():
 
     return str(resp)
 
-if __name__ == "__app__":
+if __name__ == "__main__":
     app.run(debug=True)
+
