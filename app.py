@@ -16,7 +16,7 @@ def sms_reply():
 
     # Create reply
     resp = MessagingResponse()
-    resp.message("Hello there "+sender+",\n Welcome to Family First Bank"\n How can i help you today?)
+    resp.message("Hello there "+sender+",\n Welcome to Family First Bank\n How can i help you today?")
 
     return str(resp)
 
